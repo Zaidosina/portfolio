@@ -1,40 +1,100 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="outlines.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио</title>
-    <meta name="description" content="Информация обо мне и моих навыках">
+    <title>Портфолио Заидова Анара</title>
+    <meta name="description" content="Портфолио , в котором содержится информация о его обучении, опыте работы и навыках">
+    <link href="outlines.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    Обо мне
-    Навыки
-    Интересы
-    Контакты
-    Анар Заидов
-    "Программист"
-    Пара слов обо мне
-    Привет ✌
-    В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана 
-    по направлению «Информатика и вычисли­тельная техника».
-    В прошлом году защитил диплом бакалавра на тему «Разработка очень сложного программного комплекса для супер-важной цели». Работа была "высоко" оценена комиссией.
-    Также я уже успел поработать инженером в одном провайдере в Пушкино, 
-    но в будущем планирую стать разработчиком сложных программных комплексов и систем.
-    Мои навыки
-    Сортировать
-    по названию
-    по уровню
-    html
-    css
-    python
-    c++
-    Мои интересы
-    Наибольший интерес для меня в данный момент представляет программирование и изучение искусственного интеллекта.
-    Но помимо учёбы и работы я также люблю играть на барабанах и читать зарубежную классику.
-    Мои контакты
-    +7 999 123-45-67
-    email@mail.ru
-    © 2023 Сергей Константинов  
+<header>
+    <a><img src="img/main-logo.svg" width="60" height="60" alt="Логотип"></a>
+    <nav>
+        <a href="#info">Обо мне</a>
+        <a href="#skills">Навыки</a>
+        <a href="#interests">Интересы</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+</header>
+
+<main>
+    <section id="intro">
+        <img src="img/user-photo.jpg" width="400" height="400" alt="Фото Анар">
+        <h1>Заидов Анар</h1>
+        <p>"Программист" от бога(Жи есть)</p>
+    </section>
+
+    <section id="info">
+        <h2>Пара слов обо мне</h2>
+        <p>Салам малекум братья</p>
+        <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана 
+        по направлению «Информатика и вычисли­тельная техника».</p>
+        <p>В прошлом году я защитил диплом бакалавра на тему «Разработка очень сложного xtuj-nj для супер-неважной цели». 
+            Работа была "высоко" оценена комиссией.</p>
+        <p>Также я уже не успел поработать инженером , но в будущем планирую стать дворником или курьером.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Мои навыки</h2>
+        <div>
+            <p>Сортировать</p>
+            <button>по названию</button>
+            <button>по уровню</button>
+        </div>
+        <dl>
+            <dt>html</dt>
+            <dd>
+                <div style="width: 40%;">40%</div>
+            </dd>
+            <dt>css</dt>
+            <dd>
+                <div style="width: 40%;">40%</div>
+            </dd>
+            <dt>python</dt>
+            <dd>
+                <div style="width: 40%;">40%</div>
+            </dd>
+            <dt>c++</dt>
+            <dd>
+                <div style="width: 40%;">40%</div>
+            </dd>
+        </dl>
+    </section>
+
+    <section id="interests">
+        <h2>Мои интересы</h2>
+        <p>Наибольший интерес для меня в данный момент представляет игра в геншин импакт и хср.</p>
+        <p>Помимо учёбы и игр я также люблю спать и переводить мангу.</p>
+    </section>
+
+    <section id="contacts">
+        <h2>Мои контакты</h2>
+        <ul>
+            <li><a href="tel:+79991234567">+7 777 xxx-xx-xx</a></li>
+            <li><a href="mailto:email@mail.ru">email@gmail.sru</a></li>
+        </ul>
+
+        <ul>
+            <li><a>GitHub</a></li>
+            <li><a>Gitlab</a></li>
+            <li><a>Instagram</a></li>
+            <li><a>Telegram</a></li>
+            <li><a>Вконтакте</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 Заидов Анар</p>
+</footer>
 </body>
 </html>
