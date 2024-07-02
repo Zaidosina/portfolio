@@ -1,0 +1,233 @@
+:root {
+    --txt-color: #212121;
+    --green: #09A494;
+    --bg-color: #FFFFFF;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body { 
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5; /*line-height/font-size*/
+    text-align: left;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+}
+h1 {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.subtitle {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: left;
+    color: var(--green);
+}
+
+h2 {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+}
+
+h3 {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+}
+
+button, a {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+}
+
+button {
+    padding: 6px 10px 10px; /*сверху, справа и слева, снизу*/
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    color: var(--green);
+    background-color: var(--bg-color);
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+button:hover {
+    color: var(--bg-color);
+    background-color: var(--green);
+}
+
+.container {
+    min-width: 320px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px 10px 15px; /*сверху, справа, снизу, слева*/
+    color: var(--txt-color);
+}
+.main-nav a:hover {
+    color: var(--green);
+}
+
+.skill-list {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.skill-list dt {
+    margin-bottom: 6px;
+    padding: 5px 0 5px 38px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+.skill-level {
+    margin: 4px 0 20px;
+    padding: 2px;
+    font-size: 0;
+    border: 1px solid var(--txt-color);
+    border-radius: 16px;
+}
+
+.skill-level div {
+    height: 14px;
+    background-color: var(--green);
+    border-radius: 8px;
+}
+
+.skill-item {
+    text-transform: lowercase;
+}
+
+.skill-item_html {
+    background-image: url("../img/skill-html.svg");
+}
+
+.skill-item_css {
+    background-image: url("../img/skill-css.svg");
+}
+
+.skill-item_cpp {
+    background-image: url("../img/skill-c++.svg");
+}
+
+.skill-item_python {
+    background-image: url("../img/skill-python.svg");
+}
+
+.contact {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.contact li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-link {
+    display: block;
+    padding: 5px 40px 40px 42px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    text-decoration: none;
+    color: var(--txt-color);
+}
+.contact-link:hover {
+    color: var(--green);
+}
+.contact-link_phone {
+    background-image: url("../img/icon-phone.svg");
+}
+.contact-link_mail {
+    background-image: url("../img/icon-email.svg");
+}
+
+.social {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.social li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.social-link {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--green);
+    border-radius: 50%;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.social-link:hover {
+    background-color: var(--green);
+}
+
+.social-link_github {
+    background-image: url("../img/social-Github.svg");
+}
+
+.social-link_gitlab {
+    background-image: url("../img/social-gitlab.svg");
+}
+
+.social-link_instagram {
+    background-image: url("../img/social-Insta.svg");
+}
+
+.social-link_telegram {
+    background-image: url("../img/social-Telegram.svg");
+}
+
+.social-link_vkontakte {
+    background-image: url("../img/social-VK.svg");
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.user-photo {
+    border-radius: 50%;
+}
+
+footer {
+    color: var(--bg-color);
+    background-color: var(--txt-color);
+}
