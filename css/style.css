@@ -114,6 +114,7 @@ section {
 }
 
 .main-nav {
+    display: flex;
     align-items: center;
     padding: 0;
     order: 1;
@@ -154,17 +155,17 @@ section {
 }
 
 .skills-header {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
     padding: 0;
-    gap: 40px;
+    gap: 20px;
 }
 
-  .skills-button {
+.skills-button {
     display: flex;
     flex-direction: row;
     align-items: baseline;
