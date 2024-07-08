@@ -266,11 +266,11 @@ section {
 }
 
 .contact-link {
-    display: block;
+    display:flex;
     padding: 0 0 0 42px;
     text-decoration: none;
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: left center;
     color: var(--txt-color);
     padding-top: 5px;
     padding-bottom: 5px;
