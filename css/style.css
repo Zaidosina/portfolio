@@ -126,6 +126,9 @@ section {
 }
 
 .user-intro h2{
+    font-size: 38px;
+    font-weight: normal;
+    color: var(--green);
     margin-bottom:0;
 }
 
@@ -454,6 +457,9 @@ footer {
         width:150px;
         height:150px;
         border-radius: 50%;
+    }
+    .user-intro{
+        align-items: center;
     }
     .intro{
         display: flex;
