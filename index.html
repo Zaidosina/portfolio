@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Заидова Анара</title>
+    <meta name="description" content="Портфолио , в котором содержится информация о его обучении, опыте работы и навыках">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="logo"><a><img src="img/main-logo.svg" width="60" height="60" alt="Логотип"></a>
+                <button class="main-menu main-menu-button-close">
+                    <span class="visually-hidden"> Закрыть меню</span>
+                  </button></div>
+            <nav class="main-nav main-nav_closed" >
+                    <a href="#about">Обо мне</a>
+                    <a href="#skills">Навыки</a>
+                    <a href="#interests">Интересы</a>
+                    <a href="#contacts">Контакты</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="intro" class="intro">
+                    <div class="name"><h1>Заидов Анар</h1>
+                    <p class="subtitle">Программист</p></div>
+                    <img class="user-photo" src="img/user-photo.jpg" width="400" height="400" alt="Фото Анара красавчика жи есть братья">
+            </section>
+
+            <section id="about" class="about">
+                <div class="text-wrapper">
+                <h2>Пара слов обо мне</h2>
+                <p>Салам малекум братья</p>
+                <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана 
+                по направлению «Информатика и вычисли­тельная техника».</p>
+                <p>В прошлом году я защитил диплом бакалавра на тему «Разработка очень сложного xtuj-nj для супер-неважной цели». 
+                    Работа была "высоко" оценена комиссией.</p>
+                <p>Также я уже не успел поработать инженером , но в будущем планирую стать дворником или курьером.</p>
+            </div>
+            </section>
+
+            <section id="skills" class="skills">
+                <div class="skills-header">
+                    <h2>Мои навыки</h2>
+                    <div class="skills-button">
+                        <p>Сортировать</p>
+                        <button data-type="name">по названию</button>
+                        <button data-type="level">по уровню</button>
+                    </div>
+                </div>
+                <dl class="skill-list">
+                </dl>
+            </section>
+            
+            <section id="interests" class="interests">
+                <h2>Мои интересы</h2>
+                <div class="text-wrapper"><p>Наибольший интерес для меня в данный момент представляет игра в геншин импакт и хср.</p>
+                <p>Помимо учёбы и игр я также люблю спать и переводить мангу.</p></div>
+            </section>
+
+            <section id="contacts" class="contacts">
+                <h2>Мои контакты</h2>
+                <ul class="contact">
+                    <li><a class="contact-link contact-link_phone" href="tel:+79991234567">+7 777 xxx-xx-xx</a></li>
+                    <li><a class="contact-link contact-link_mail" href="mailto:email@mail.sru">email@gmail.sru</a></li>
+                </ul>
+                
+                <ul class="social">
+                    <li><a class="social-link social-link_github" href="https://github.com"><span class="social-text visually-hidden">GitHub</span></a></li>
+                    <li><a class="social-link social-link_gitlab" href="https://gitlab.com"><span class="social-text visually-hidden">Gitlab</span></a></li>
+                    <li><a class="social-link social-link_instagram" href="https://instagram.com"><span class="social-text visually-hidden">Instagram</span></a></li>
+                    <li><a class="social-link social-link_telegram" href="https://telegram.org"><span class="social-text visually-hidden">Telegram</span></a></li>
+                    <li><a class="social-link social-link_vkontakte" href="https://vk.com"><span class="social-text visually-hidden">Вконтакте</span></a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+        <p>© 2024 Абоба</p>
+        </div>
+    </footer>
+
+    <label class="switch">
+        <input class="switch-checkbox" type="checkbox">
+        <span class="switch-slider"></span>
+    </label>
+
+</body>
+</html>
