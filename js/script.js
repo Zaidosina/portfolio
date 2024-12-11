@@ -1,61 +1,63 @@
-fetch('db/skills.json')
-  .then(data => data.json())
-  .then(data => {
-    skills.data = data.data;
-    skills.generateList(skillList);
-    console.log(data)
-  })
-  .catch(() => console.error('что-то пошло не так'));
-
 const skills = {
-    data: [],
-  
-    sortMode: null,
-  
-    generateList(parentElement) {
-      parentElement.innerHTML = '';
-      this.data.forEach(skill => {
-        const skillItem = document.createElement('dt');
-        skillItem.classList.add('skill-item');
-        skillItem.style.backgroundImage = `url("../img/skill-${skill.name}.svg")`;
-        skillItem.textContent = skill.name;
-  
-        const skillLevel = document.createElement('dd');
-        skillLevel.classList.add('skill-level');
-  
-        const skillBar = document.createElement('div');
-        skillBar.style.width = `${skill.level}%`;
-        skillBar.textContent = `${skill.level}%`;
-  
-        skillLevel.append(skillBar);
-        parentElement.append(skillItem, skillLevel);
-      });
-    },
-  
-    sortList(type) {
-      if (this.sortMode !== type) {
-        this.data.sort(this.getComparer(type));
-        console.log(`Отсортировали данные по ${type}`);
-      } else {
-        this.data.reverse();
-        console.log(`Инвертировали порядок сортировки`);
-      }
-  
-      this.sortMode = type;
-    },
-  
-    getComparer(prop) {
-      return function(a, b) {
-        if (a[prop] < b[prop]) {
-          return -1;
-        }
-        if (a[prop] > b[prop]) {
-          return 1;
-        }
-        return 0;
-      };
+  data: [],
+
+  sortMode: null,
+
+  getData(filePath) {
+    fetch(filePath)
+      .then(data => data.json())
+      .then(data => {
+        this.data = data.data;
+        this.generateList(skillList);
+        console.log(data);
+      })
+      .catch(() => console.error('что-то пошло не так'));
+  },
+
+  generateList(parentElement) {
+    parentElement.innerHTML = '';
+    this.data.forEach(skill => {
+      const skillItem = document.createElement('dt');
+      skillItem.classList.add('skill-item');
+      skillItem.style.backgroundImage = `url("../img/skill-${skill.name}.svg")`;
+      skillItem.textContent = skill.name;
+
+      const skillLevel = document.createElement('dd');
+      skillLevel.classList.add('skill-level');
+
+      const skillBar = document.createElement('div');
+      skillBar.style.width = `${skill.level}%`;
+      skillBar.textContent = `${skill.level}%`;
+
+      skillLevel.append(skillBar);
+      parentElement.append(skillItem, skillLevel);
+    });
+  },
+
+  sortList(type) {
+    if (this.sortMode !== type) {
+      this.data.sort(this.getComparer(type));
+      console.log(`Отсортировали данные по ${type}`);
+    } else {
+      this.data.reverse();
+      console.log(`Инвертировали порядок сортировки`);
     }
-  };
+
+    this.sortMode = type;
+  },
+
+  getComparer(prop) {
+    return function(a, b) {
+      if (a[prop] < b[prop]) {
+        return -1;
+      }
+      if (a[prop] > b[prop]) {
+        return 1;
+      }
+      return 0;
+    };
+  }
+};
   
   const skillList = document.querySelector('dl.skill-list');
   const sortBtnsBlock = document.querySelector('.skills-button');
@@ -93,6 +95,8 @@ const skills = {
     }
   };
 
+  skills.getData('db/skills.json');
+  
   const themeCheckbox = document.querySelector('input[type="checkbox"]');
   const body = document.body;
 
