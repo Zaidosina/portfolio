@@ -1,10 +1,14 @@
+fetch('db/skills.json')
+  .then(data => data.json())
+  .then(data => {
+    skills.data = data.data;
+    skills.generateList(skillList);
+    console.log(data)
+  })
+  .catch(() => console.error('что-то пошло не так'));
+
 const skills = {
-    data: [
-      { name: 'html', level: 80 },
-      { name: 'css', level: 100 },
-      { name: 'python', level: 10 },
-      { name: 'c++', level: 55 }
-    ],
+    data: [],
   
     sortMode: null,
   
@@ -13,7 +17,7 @@ const skills = {
       this.data.forEach(skill => {
         const skillItem = document.createElement('dt');
         skillItem.classList.add('skill-item');
-        skillItem.style.backgroundImage = `url("../portfolio/img/skill-${skill.name}.svg")`;
+        skillItem.style.backgroundImage = `url("../img/skill-${skill.name}.svg")`;
         skillItem.textContent = skill.name;
   
         const skillLevel = document.createElement('dd');
