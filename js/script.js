@@ -19,7 +19,7 @@ const skills = {
     this.data.forEach(skill => {
       const skillItem = document.createElement('dt');
       skillItem.classList.add('skill-item');
-      skillItem.style.backgroundImage = `url("../img/skill-${skill.name}.svg")`;
+      skillItem.style.backgroundImage = `url("./img/skill-${skill.name}.svg")`;
       skillItem.textContent = skill.name;
 
       const skillLevel = document.createElement('dd');
