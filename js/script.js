@@ -1,3 +1,4 @@
+const skillsSection = document.querySelector('section.skills');
 const skills = {
   data: [],
 
@@ -15,22 +16,27 @@ const skills = {
 
   generateList(parentElement) {
     parentElement.innerHTML = '';
-    this.data.forEach(skill => {
-      const skillItem = document.createElement('dt');
-      skillItem.classList.add('skill-item');
-      skillItem.style.backgroundImage = `url("./img/skill-${skill.name}.svg")`;
-      skillItem.textContent = skill.name;
-
-      const skillLevel = document.createElement('dd');
-      skillLevel.classList.add('skill-level');
-
-      const skillBar = document.createElement('div');
-      skillBar.style.width = `${skill.level}%`;
-      skillBar.textContent = `${skill.level}%`;
-
-      skillLevel.append(skillBar);
-      parentElement.append(skillItem, skillLevel);
-    });
+    if (this.data.length === 0) {
+      skillsSection.style.display = 'none';
+    } else {
+      skillsSection.style.display = 'block';
+      this.data.forEach(skill => {
+        const skillItem = document.createElement('dt');
+        skillItem.classList.add('skill-item');
+        skillItem.style.backgroundImage = `url("./img/skill-${skill.name}.svg")`;
+        skillItem.textContent = skill.name;
+  
+        const skillLevel = document.createElement('dd');
+        skillLevel.classList.add('skill-level');
+  
+        const skillBar = document.createElement('div');
+        skillBar.style.width = `${skill.level}%`;
+        skillBar.textContent = `${skill.level}%`;
+  
+        skillLevel.append(skillBar);
+        parentElement.append(skillItem, skillLevel);
+      });
+    }
   },
 
   sortList(type) {
