@@ -9,7 +9,6 @@ const skills = {
       .then(data => {
         this.data = data.data;
         this.generateList(skillList);
-        console.log(data);
       })
       .catch(() => console.error('что-то пошло не так'));
   },
